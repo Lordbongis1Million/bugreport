@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>BugReport:Homepage</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="css/style.css">
-<style>
-
-</style>
-</head>
+  <head>
+    <title>BugReport:Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 <body>
+
 <?php include 'header.php';?>
     
 <div class="header">
-  <h1>My Website</h1>
-  <p>A website created by me.</p>
+  <img id="logo" src="Assets/Zugbug.PNG"/>
+  <h1>Cosmara Bug Reporter</h1>
 </div>
 
 <div class="navbar">
-  <a href="#">Link</a>
+  <a href="login.php">Logining</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#" class="right">Link</a>
