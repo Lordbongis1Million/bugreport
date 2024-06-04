@@ -11,7 +11,7 @@
 <?php include 'header.php';?>
     
 <div class="header">
-  <img id="logo" src="Assets/Zugbug.PNG"/>
+  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
   <h1>Cosmara Bug Reporter</h1>
 </div>
 

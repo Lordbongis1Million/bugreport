@@ -11,10 +11,19 @@ body {
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
+  padding: 40px;
   text-align: center;
-  background: #1abc9c;
+  background: #6f6f6f;
   color: white;
+  display: flex;
+  align-items: center; /*Makes the two header thingos side by side */
+}
+
+#logo {
+  width: 20 px;
+  height: auto;
+  margin-right: 100px;
+  /*This stuff makes the image the correct size and spaceing between it and the Title */
 }
 
 /* Increase the font size of the heading */
