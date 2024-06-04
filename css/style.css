@@ -23,21 +23,39 @@ body {
 }
 
 #logo {
-  width: 8%;
+  width: 100px;
   height: auto;
   margin-right: 20%;
   /*This stuff makes the image the correct size and spaceing between it and the Title */
 }
 
-/* Increase the font size of the heading */
+
 .header h1 {
-  font-size: 60px;
+  font-size: 4vw; 
+  transition: font-size 0.2s; 
 }
 
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
   background-color: #2c2c2c;
+  display: flex;
+  justify-content: center; /* Centers the button */
+  padding: 5px;
+}
+
+.navbar button {
+  background-color: #FFD600; 
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff0000; 
 }
 
 /* Column container */
@@ -51,18 +69,24 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
   background-color: #2c2c2c;
-  padding: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
   background-color: #2c2c2c;
-  padding: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 
 /* Fake image, just for this example */
@@ -80,6 +104,14 @@ body {
   color: White;
   display: block;
   align-items: center; /*Makes the two footer thingos side by side */
+}
+
+.footer a {/* Styles the Footer Links */
+  padding-left: 3%;
+  padding-right: 3%;
+  color: White;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 /* Change color on hover */
