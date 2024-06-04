@@ -16,10 +16,7 @@
 </div>
 
 <div class="navbar">
-  <a href="login.php">Logining</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
+
 </div>
 
 <div class="row">
@@ -33,7 +30,8 @@
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <a href="login.php">Sign In</a>
+  <a href="#" class="right">Help</a>
 </div>
 
 </body>
