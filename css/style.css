@@ -69,30 +69,40 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
+  flex: 1;
+  max-width: 39%;
   background-color: #2c2c2c;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 3%;
   padding-top: 3%;
+  box-sizing: border-box;
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 40%; /* IE10 */
-  flex: 40%;
+  flex: 1;
+  max-width: 59%;
   background-color: #2c2c2c;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 3%;
   padding-top: 3%;
+  box-sizing: border-box;
 }
 
 /* Fake image, just for this example */
-.main images {
-  padding: 3%;
-  
+.main .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.main .images img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
 }
 
 /* Footer */
@@ -102,7 +112,6 @@ body {
   background: #6f6f6f;
   color: White;
   display: block;
-  align-items: center; /*Makes the two footer thingos side by side */
 }
 
 .footer a {/* Styles the Footer Links */
@@ -126,11 +135,10 @@ body {
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* Responsive layout - Makes sure that the columns take full width on 400px wide screens */
 @media screen and (max-width: 400px) {
   .navbar a {
-    float: none;
-    width: 100%;
+    max-width: 100%;
   }
 }
 
