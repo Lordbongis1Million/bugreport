@@ -1,6 +1,144 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 1%;
+  text-align: center;
+  background: #6f6f6f;
+  color: white;
+  display: flex;
+  align-items: center; /*Makes the two header thingos side by side */
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20%;
+  /*This stuff makes the image the correct size and spaceing between it and the Title */
+}
+
+
 .header h1 {
-  font-family: "Inter","sans-serif"
+  font-size: 4vw; 
+  transition: font-size 0.2s; 
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center; /* Centers the button */
+  padding: 5px;
+}
+
+.navbar button {
+  background-color: #FFD600; 
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff0000; 
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 1;
+  max-width: 39%;
+  background-color: #2c2c2c;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  box-sizing: border-box;
+}
+
+/* Main column */
+.main {   
+  flex: 1;
+  max-width: 59%;
+  background-color: #2c2c2c;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  box-sizing: border-box;
+}
+
+/* Fake image, just for this example */
+.main .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.main .images img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  padding: 1%;
+  text-align: center;
+  background: #6f6f6f;
+  color: White;
+  display: block;
+}
+
+.footer a {/* Styles the Footer Links */
+  padding-left: 3%;
+  padding-right: 3%;
+  color: White;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.footer a:hover {
+  background-color: #FFD600;
+  color: black;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - Makes sure that the columns take full width on 400px wide screens */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    max-width: 100%;
+  }
 }
 
