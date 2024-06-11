@@ -28,10 +28,10 @@
 
   <div class="main">
     <div class="images">
-      <img src="Assets/image1.jpg" alt="Image 1">
-      <img src="Assets/image2.jpg" alt="Image 2">
-      <img src="Assets/image3.jpg" alt="Image 3">
-      <img src="Assets/image4.jpg" alt="Image 4">
+      <img src="Assets/1.png" alt="Image 1">
+      <img src="Assets/2.png" alt="Image 2">
+      <img src="Assets/3.png" alt="Image 3">
+      <img src="Assets/4.png" alt="Image 4">
   </div>
 </div>
 
