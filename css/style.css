@@ -44,6 +44,7 @@ body {
   font-family: "Inter","sans-serif";
   margin: 0;
   padding: 0;
+  background-color: #2c2c2c;
 }
 
 /* Header/logo Title */
@@ -276,4 +277,16 @@ body {
   font-size: 1.5rem;
   font-weight: 450;
   flex: 0 0 35%;
+}
+
+.grey-body {
+  background-color: #2c2c2c;
+  padding: 2rem 4rem;
+  width: 50%;
+  margin: auto;
+}
+
+.gradient-background {
+  background-image: linear-gradient(#BDBDBD, #FFFFFF);
+  padding: 1rem 2rem;
 }

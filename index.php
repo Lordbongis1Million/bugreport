@@ -91,7 +91,7 @@
 
 <div class="footer">
   <a href="login.php">Sign In</a>
-  <a href="#" class="right">Help</a>
+  <a href="help.php" class="right">Help</a>
 </div>
 
 <script>
