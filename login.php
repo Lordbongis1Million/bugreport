@@ -9,7 +9,7 @@
     <body>
 
         <div class="container">
-         <form action="action_page.php">
+         <form action="process_form.php">
 
              <label for="fname">First Name</label>
             <input type="text" id="fname" name="first_name" placeholder="Your name..">
