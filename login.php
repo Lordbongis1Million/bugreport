@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>login:ultimate</title>
+        <title>bugreport:loginpage</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
-        <div class="container">
-         <form action="process_form.php">
+<div class="header">
+  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
+  <h1>Cosmara Bug Reporter</h1>
+</div>
 
-             <label for="fname">First Name</label>
+      <div class="main">
+        <form action="process_form.php">
+
+            <label for="fname">First Name</label>
             <input type="text" id="fname" name="first_name" placeholder="Your name..">
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="last_name" placeholder="Your last name..">
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                 <input type="submit" value="Submit">
-            </form>
-        </div>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Your last name..">
+              
+              <label for="email">Email Address</label>
+              <input type="text" id="email" name="email" placeholder="Your Email Address">
+              
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+          </form>
+      </div>
 
 
     </body>
@@ -40,21 +42,32 @@
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
+  padding: 1rem; /* Some padding */  
+  border: 0.1rem solid #ccc; /* Gray border */
+  border-radius: 0.4rem; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
+  margin-top: 0.6rem; /* Add a top margin */
+  margin-bottom: 1rem; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
+
+/* Changes the placeholder text to be Black! */
+input[type=text]::placeholder, textarea::placeholder {
+  color: black;
+}
+
+/* Changes the label text to be white! */
+label {
+  color: white;
+}
+
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
+  background-color: #FFD600;
+  color: black;
+  padding: 0.5rem 4rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.1rem;
   cursor: pointer;
 }
 /* When moving the mouse over the submit button, add a darker green color */
@@ -63,9 +76,9 @@ input[type=submit]:hover {
 }
 /* Add a background color and some padding around the form */
 .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  border-radius: 0.5rem;
+  background-color: #2c2c2c;
+  padding: 1rem;
 }
 
 
