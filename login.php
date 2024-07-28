@@ -16,11 +16,10 @@
 
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="last_name" placeholder="Your last name..">
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
+                
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Your Email Address">
+                
                 </select>
 
                 <label for="subject">Subject</label>
