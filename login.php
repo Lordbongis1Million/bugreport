@@ -14,7 +14,7 @@
 </div>
 
       <div class="main">
-        <form action="process_form.php">
+        <form action="process_form.php" method= "POST">
 
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="first_name" placeholder="Your name..">
