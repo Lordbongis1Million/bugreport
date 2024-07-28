@@ -94,6 +94,16 @@
   <a href="help.php" class="right">Help</a>
 </div>
 
+<style>
+
+@media (min-width: 768px) {
+  html {
+    flex-direction: column;
+  }
+}
+
+</style>
+
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
