@@ -43,11 +43,10 @@
 input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 1rem; /* Some padding */  
-  border: 0.1rem solid #ccc; /* Gray border */
-  border-radius: 0.4rem; /* Rounded borders */
+  border: 0.2rem solid #2c2c2c; 
+  border-radius: 0.5rem; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 0.6rem; /* Add a top margin */
-  margin-bottom: 1rem; /* Bottom margin */
+  margin: 1rem;
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -58,7 +57,11 @@ input[type=text]::placeholder, textarea::placeholder {
 
 /* Changes the label text to be white! */
 label {
-  color: white;
+  color: black;
+}
+
+form {
+  background-image: linear-gradient(#BDBDBD, #FFFFFF);
 }
 
 /* Style the submit button with a specific background color etc */
