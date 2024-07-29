@@ -16,7 +16,7 @@
 </div>
 
 <div class="navbar">
-  <button>REPORT BUG</button>
+  <button onclick="location.href='report.php'">REPORT BUG</button>
 </div>
 
 <div class="main-container">
@@ -87,22 +87,12 @@
     </div>
   </div>
 </div>
-  
+
 
 <div class="footer">
   <a href="login.php">Sign In</a>
   <a href="help.php" class="right">Help</a>
 </div>
-
-<style>
-
-@media (min-width: 768px) {
-  html {
-    flex-direction: column;
-  }
-}
-
-</style>
 
 <script>
 let slideIndex = 1;

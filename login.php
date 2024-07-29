@@ -29,8 +29,11 @@
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                 <input type="submit" value="Submit">
           </form>
-      </div>
 
+      </div>
+<div class="footer">
+  <a href="index.php">Back</a>
+</div>
 
     </body>
 
@@ -41,12 +44,13 @@
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-  width: 100%; /* Full width */
+  width: 80%; 
   padding: 1rem; /* Some padding */  
   border: 0.2rem solid #2c2c2c; 
   border-radius: 0.5rem; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin: 1rem;
+  font-size: 0.8rem;
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -58,10 +62,15 @@ input[type=text]::placeholder, textarea::placeholder {
 /* Changes the label text to be white! */
 label {
   color: black;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 form {
   background-image: linear-gradient(#BDBDBD, #FFFFFF);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 /* Style the submit button with a specific background color etc */
@@ -84,5 +93,20 @@ input[type=submit]:hover {
   padding: 1rem;
 }
 
+/* Added Responsiveness for small screen size */
+@media (max-width: 768px) {
+  input[type=text], select, textarea {
+    width: 100%;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+}
+/* Added Resposiveness to the text padding */
+@media (max-width: 768px) {
+  label {
+    padding: 1rem, 0;
+    font-size: 2.2rem;
+  }
+}
 
 </style>
