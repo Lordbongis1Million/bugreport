@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/Exception.php';
-require 'path/to/PHPMailer/PHPMailer.php';
-require 'path/to/PHPMailer/SMTP.php';
+require 'C:/xampp/htdocs/bugreport/PHPMailer/Exception.php';
+require 'C:/xampp/htdocs/bugreport/PHPMailer/PHPMailer.php';
+require 'C:/xampp/htdocs/bugreport/PHPMailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] =="POST") {
 
