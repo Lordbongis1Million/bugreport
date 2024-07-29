@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] =="POST") {
 
     $where = htmlspecialchars($_POST['where']);
