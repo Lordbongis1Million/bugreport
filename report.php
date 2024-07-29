@@ -15,14 +15,21 @@
   <h1>Cosmara Bug Reporter</h1>
 </div>
 
-<main-container>
-
-    <text-container>
-        
-    </text-container>
-
-</main-container>
+<div class="grey-body">
+    <div class="gradient-background">
+        <form action="email.php" method= "POST">
+            <label for="where">Where in the game did this occour?:</label><br>
+            <input type="text" id="where" name="where" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="bug">Bug Description:</label><br>
+            <textarea id="bug" name="bug" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
 
 <div class="footer">
   <a href="index.php">Back</a>
 </div>
+
