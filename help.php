@@ -11,7 +11,7 @@
 <?php include 'header.php';?>
     
 <div class="header">
-  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
+  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo" onclick ="location.href='index.php'"/>
   <h1>Help Menu</h1>
 </div>
 
