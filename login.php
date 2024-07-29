@@ -9,7 +9,7 @@
     <body>
 
 <div class="header">
-  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
+  <img id="logo" src="Assets/Zugbug.PNG" alt="Logo" onclick ="location.href='index.php'"/>
   <h1>Cosmara Bug Reporter</h1>
 </div>
 
