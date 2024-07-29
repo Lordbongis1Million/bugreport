@@ -1,5 +1,12 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'path/to/PHPMailer/Exception.php';
+require 'path/to/PHPMailer/PHPMailer.php';
+require 'path/to/PHPMailer/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] =="POST") {
 
     $where = htmlspecialchars($_POST['where']);
@@ -13,18 +20,31 @@ if ($_SERVER["REQUEST_METHOD"] =="POST") {
     $message .= "Bug Specific Place: \n$where\n";
     $message .= "Bug Discription \n$bug\n";
 
-    /* Content-type header  */
-    $headers = "MIME-VERSION: 1.0" . "\r\n";
-    $headers .= "content-type: text/plain; charset=UTF-8" . "\r\n";
+    $mail = new PHPMailer(true);
 
-    // OMG i just realised i can use two /'s to comment stuff in on one line only, holy crap thats so cool.
-    $headers .= 'From: ' . $email . "\r\n";
-    $headers .= 'Reply-To: ' . $email . "\r\n";
+    try {
+        
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; 
+        $mail->SMTPAuth = true;
+        $mail->Username = 'chasebowen88@gmail.com'; 
+        $mail->Password = 'Runbumrun1'; 
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    // Makes it so that it lets you know when the email was sent or not.
-    if (mail($to, $subject, $message, $headers)) {
+        
+        $mail->setFrom($email, 'Bug Reporter');
+        $mail->addAddress($to); 
+
+        
+        $mail->isHTML(false); 
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+
+        $mail->send();
         echo 'Your bug report has been sent successfully.';
-    } else {
-        echo 'There was a problem sending your bug report.';
+    } catch (Exception $e) {
+        echo "There was a problem sending your bug report. Mailer Error: {$mail->ErrorInfo}";
     }
 }
+?>
