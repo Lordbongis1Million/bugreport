@@ -8,7 +8,74 @@
   </head>
 <body>
 
-<?php include 'header.php';?>
+<?php include 'header.php';
+// Include the database configuration file
+include 'setup.php';
+
+// Fetch all pages from the database
+$sql = "SELECT * FROM pages where id = 1 ";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  $page = $result->fetch_assoc();
+  
+  // Assign the fields to variables
+  $title1 = $page['title1'];
+  $text1 = $page['text1'];
+  $image1 = $page['image1'];
+  $title2 = $page['title2'];
+  $text2 = $page['text2'];
+  $image2 = $page['image2'];
+  $title3 = $page['title3'];
+  $text3 = $page['text3'];
+  $image3 = $page['image3'];
+} else {
+  echo "Page not found.";
+  exit;
+}
+
+?>
+
+// CREATE TABLE `pages` (
+  `id` int(11) NOT NULL,
+  `title1` varchar(255) DEFAULT NULL,
+  `text1` text DEFAULT NULL,
+  `image1` varchar(255) DEFAULT NULL,
+  `title2` varchar(255) DEFAULT NULL,
+  `text2` text DEFAULT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `title3` varchar(255) DEFAULT NULL,
+  `text3` text DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL,
+  `title1` varchar(255) DEFAULT NULL,
+  `text1` text DEFAULT NULL,
+  `image1` varchar(255) DEFAULT NULL,
+  `title2` varchar(255) DEFAULT NULL,
+  `text2` text DEFAULT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `title3` varchar(255) DEFAULT NULL,
+  `text3` text DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+// Put that stuff in database
     
 <div class="header">
   <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
