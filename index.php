@@ -15,9 +15,7 @@ include 'setup.php';
 if (isset($_GET['id'])) {
   $id = $_GET['id']; 
 
-  // Meant to give the page an id of 1 grrr
-  else
-  { $id = 1;}
+
 
   // Fetch the page details from the database
   $sql = "SELECT * FROM pages WHERE id=$id";
@@ -39,6 +37,9 @@ if (isset($_GET['id'])) {
     $image3 = $page['image3'];
   } 
 }
+  // Meant to give the page an id of 1 grrr
+else
+  { $id = 1;}
 ?>
     
 <div class="header">
