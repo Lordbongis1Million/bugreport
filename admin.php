@@ -1,13 +1,12 @@
 <?php
 
-//<?php
-//session_start();
+
+session_start();
 // Redirect to login page if user is not logged in
-//if (!isset($_SESSION['loggedin'])) {
-//    header('Location: login.html');
-//    exit;
-//}
-// ? >
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.html');
+    exit;
+}
 
 
 // Include the database configuration file
