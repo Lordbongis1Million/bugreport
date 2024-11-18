@@ -19,15 +19,15 @@
 
     <div class="gradient-background">
 
-        <form action="email.php" method= "POST">
+        <form action="send_report.php" method= "POST">
 
             <label for="where">Where in the game did this occour?:</label><br>
 
             <input type="text" id="where" name="where" required><br><br>
 
-            <label for="email">Email:</label><br>
+            <label for="rarity">Bug Rarity:</label><br>
 
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="text" id="rarity" name="rarity" required><br><br>
 
             <label for="bug">Bug Description:</label><br>
 
