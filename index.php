@@ -13,10 +13,14 @@
 include 'setup.php';
 
 if (isset($_GET['id'])) {
-  $id = $_GET['id'];
+  $id = $_GET['id']; 
+
+
+
   // Fetch the page details from the database
   $sql = "SELECT * FROM pages WHERE id=$id";
   $result = $conn->query($sql);
+
   // Check if the page exists
   if ($result->num_rows > 0) {
     $page = $result->fetch_assoc();
@@ -31,57 +35,12 @@ if (isset($_GET['id'])) {
     $title3 = $page['title3'];
     $text3 = $page['text3'];
     $image3 = $page['image3'];
-  } else {
-    echo "Page not found.";
-    exit;
-  }
-} else {
-  echo "No page ID provided.";
-  exit;
+  } 
 }
-
+  // Meant to give the page an id of 1 grrr
+else
+  { $id = 1;}
 ?>
-
-// CREATE TABLE `pages` (
-  `id` int(11) NOT NULL,
-  `title1` varchar(255) DEFAULT NULL,
-  `text1` text DEFAULT NULL,
-  `image1` varchar(255) DEFAULT NULL,
-  `title2` varchar(255) DEFAULT NULL,
-  `text2` text DEFAULT NULL,
-  `image2` varchar(255) DEFAULT NULL,
-  `title3` varchar(255) DEFAULT NULL,
-  `text3` text DEFAULT NULL,
-  `image3` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `pages` (
-  `id` int(11) NOT NULL,
-  `title1` varchar(255) DEFAULT NULL,
-  `text1` text DEFAULT NULL,
-  `image1` varchar(255) DEFAULT NULL,
-  `title2` varchar(255) DEFAULT NULL,
-  `text2` text DEFAULT NULL,
-  `image2` varchar(255) DEFAULT NULL,
-  `title3` varchar(255) DEFAULT NULL,
-  `text3` text DEFAULT NULL,
-  `image3` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-ALTER TABLE `pages`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `pages`
---
-ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
-// Put that stuff in database
     
 <div class="header">
   <img id="logo" src="Assets/Zugbug.PNG" alt="Logo"/>
@@ -95,7 +54,7 @@ COMMIT;
 <div class="main-container">
   
   <div class="text-container">
-    <p>The Cosmara Bug Reporter is a website created by the play-tester Chase Bowen He did this to assist the solo game developer Austin Bowen in reporting bugs for Cosmara. <br><br> This website as the name suggests, allows you to report bugs you encounter in-game, directly to Austin’s support email address so that he can review it and make a hot-fix. <br><br> This website also requires you to sign in, but that grants the benefit that it tracks how many reports you’ve made.</p>
+    <p><?php print $text1; ?><br><br><?php print $text2; ?><br><br><?php print $text3; ?></p>
 
   </div>
   <div class="main">
