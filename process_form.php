@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $conn->real_escape_string($_POST['subject']);
     
     // SQL query to insert form data into the contacts table
-    $sql = "INSERT INTO contacts (first_name, last_name, email, subject, created_at)
-        VALUES ('$first_name', '$last_name', '$email', '$subject', NOW())";
+    $sql = "INSERT INTO contacts (first_name, last_name, email, subject,)
+        VALUES ('$first_name', '$last_name', '$email', '$subject'";
 
     // Execute the query and check if it was successful
     if ($conn->query($sql) === TRUE) {
